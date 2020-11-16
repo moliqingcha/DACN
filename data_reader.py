@@ -7,7 +7,7 @@ class H5DataLoader(object):
     def __init__(self, data_path, is_train=True):
         self.is_train = is_train
         data_file = h5py.File(data_path, 'r')
-        self.images, self.labels = data_file['X'], data_file['Y1']
+        self.images, self.labels = data_file['X'], data_file['Y']
         self.gen_indexes()
     
     def gen_indexes(self):
